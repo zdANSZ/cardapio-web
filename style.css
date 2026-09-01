@@ -378,18 +378,6 @@ a{ color:inherit; text-decoration:none; }
 }
 
 /* ---------------------------------------------------------------
-   Divider (pizza ornament)
---------------------------------------------------------------- */
-.divider{
-  display:flex;
-  justify-content:center;
-  color:var(--gold);
-  opacity:.8;
-  margin:-1.5rem 0 0;
-}
-.divider-svg{ width:90px; height:34px; }
-
-/* ---------------------------------------------------------------
    Footer
 --------------------------------------------------------------- */
 .site-footer{
