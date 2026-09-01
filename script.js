@@ -33,9 +33,24 @@
     .map(link => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
 
+  const navEl = document.querySelector('.menu-nav');
+
+  // Scrolls only the nav's own horizontal track — never the page — so the
+  // active pill stays in view as the user scrolls, even without tapping it.
+  const centerNavLink = (link) => {
+    if (!navEl || !link) return;
+    const navRect = navEl.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    const delta = (linkRect.left + linkRect.width / 2) - (navRect.left + navRect.width / 2);
+    if (Math.abs(delta) < 2) return;
+    navEl.scrollTo({ left: navEl.scrollLeft + delta, behavior: 'smooth' });
+  };
+
   const setActive = (id) => {
     navLinks.forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      const isActive = link.getAttribute('href') === `#${id}`;
+      link.classList.toggle('active', isActive);
+      if (isActive) centerNavLink(link);
     });
   };
 
@@ -83,11 +98,10 @@
   }
 
   /* ---------------------------------------------------------
-     Keep the tapped nav pill centered in view (mobile)
+     Also center immediately on tap, without waiting for the
+     scrollspy to catch up with the smooth-scroll animation
   --------------------------------------------------------- */
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-    });
+    link.addEventListener('click', () => centerNavLink(link));
   });
 })();
