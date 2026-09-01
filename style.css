@@ -80,6 +80,7 @@ a{ color:inherit; text-decoration:none; }
 
 .sidebar-top .brand img{
   height:38px; width:auto;
+  aspect-ratio:480/365;
 }
 
 .tagline{ display:none; }
@@ -148,7 +149,7 @@ a{ color:inherit; text-decoration:none; }
   padding:1.6rem .5rem 1.4rem;
 }
 
-.hero-logo{ width:min(58vw, 150px); height:auto; }
+.hero-logo{ width:min(58vw, 150px); height:auto; aspect-ratio:480/365; }
 
 .hero-menu-word{
   writing-mode:vertical-rl;
@@ -396,7 +397,7 @@ a{ color:inherit; text-decoration:none; }
   padding-top:3.5rem;
   padding-bottom:5rem;
 }
-.footer-logo{ width:110px; margin:0 auto 1.6rem; opacity:.92; }
+.footer-logo{ width:110px; height:auto; aspect-ratio:480/365; margin:0 auto 1.6rem; opacity:.92; }
 
 .footer-note{
   font-size:.78rem;
@@ -427,11 +428,63 @@ a{ color:inherit; text-decoration:none; }
 }
 .footer-social a:hover{ color:var(--gold); }
 
+.footer-whatsapp{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  margin:0 0 2.2rem;
+  padding:.75rem 1.5rem;
+  border:1px solid var(--gold);
+  border-radius:999px;
+  font-size:.82rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--ink);
+  transition:background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+}
+.footer-whatsapp svg{ width:18px; height:18px; }
+.footer-whatsapp:hover{
+  background:var(--gold);
+  color:var(--cream-soft);
+  transform:translateY(-1px);
+}
+
 .footer-fine{
   font-size:.68rem;
   color:var(--ink-soft);
   opacity:.6;
   letter-spacing:.04em;
+}
+
+/* ---------------------------------------------------------------
+   WhatsApp floating action button
+--------------------------------------------------------------- */
+.whatsapp-fab{
+  position:fixed;
+  left:1.1rem;
+  bottom:1.1rem;
+  width:52px; height:52px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:55;
+  box-shadow:0 6px 18px rgba(20,17,10,.22);
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease);
+  animation:fab-pulse 2.8s ease-in-out infinite;
+}
+.whatsapp-fab svg{ width:27px; height:27px; color:#fff; }
+.whatsapp-fab:hover{
+  transform:scale(1.08);
+  box-shadow:0 8px 22px rgba(20,17,10,.3);
+}
+@keyframes fab-pulse{
+  0%,100%{ box-shadow:0 6px 18px rgba(20,17,10,.22), 0 0 0 0 rgba(37,211,102,.45); }
+  50%{ box-shadow:0 6px 18px rgba(20,17,10,.22), 0 0 0 8px rgba(37,211,102,0); }
+}
+@media (prefers-reduced-motion: reduce){
+  .whatsapp-fab{ animation:none; }
 }
 
 /* ---------------------------------------------------------------
@@ -505,14 +558,16 @@ a{ color:inherit; text-decoration:none; }
     flex-direction:column;
     align-items:stretch;
     justify-content:flex-start;
-    padding:2.6rem 2.2rem;
+    padding:clamp(1.1rem, 4.5vh, 2.6rem) 2.2rem;
     border-bottom:none;
     border-right:1px solid var(--line);
     gap:0;
+    overflow-y:auto;
+    scrollbar-width:thin;
   }
 
-  .sidebar-top{ display:flex; justify-content:center; margin-bottom:1.6rem; }
-  .sidebar-top .brand img{ height:auto; width:150px; }
+  .sidebar-top{ display:flex; justify-content:center; margin-bottom:clamp(.7rem, 3vh, 1.6rem); flex-shrink:0; }
+  .sidebar-top .brand img{ height:auto; width:clamp(92px, 15vh, 150px); }
 
   .tagline{
     display:block;
@@ -520,39 +575,61 @@ a{ color:inherit; text-decoration:none; }
     font-family:var(--font-display);
     font-style:italic;
     color:var(--gold);
-    font-size:1.05rem;
+    font-size:clamp(.9rem, 1.8vh, 1.05rem);
     line-height:1.4;
-    margin:0 0 3rem;
+    margin:0 0 clamp(1rem, 4.5vh, 3rem);
+    flex-shrink:0;
   }
 
   .menu-nav{
     flex-direction:column;
     overflow:visible;
-    gap:1.15rem;
+    gap:clamp(.5rem, 2.2vh, 1.15rem);
     flex:1;
   }
   .menu-nav a{
-    font-size:.82rem;
+    font-size:clamp(.76rem, 1.5vh, .82rem);
     padding:.15rem 0;
   }
   .menu-nav a::after{ bottom:-4px; }
 
   .sidebar-bottom{
     display:block;
-    padding-top:1.6rem;
+    padding-top:clamp(.7rem, 2.6vh, 1.6rem);
+    margin-top:clamp(.8rem, 2.6vh, 1.6rem);
     border-top:1px solid var(--line);
+    flex-shrink:0;
   }
+
+  .whatsapp-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    margin-bottom:clamp(.8rem, 2.8vh, 1.4rem);
+    padding:.55rem .8rem;
+    border:1px solid var(--gold);
+    border-radius:999px;
+    font-size:.76rem;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink);
+    transition:background .25s var(--ease), color .25s var(--ease);
+  }
+  .whatsapp-link svg{ width:15px; height:15px; flex-shrink:0; }
+  .whatsapp-link:hover{ background:var(--gold); color:var(--cream-soft); }
+
   .social-label{
     display:block;
     font-family:var(--font-display);
     font-style:italic;
     color:var(--gold);
-    margin-bottom:.7rem;
-    font-size:.92rem;
+    margin-bottom:clamp(.4rem, 1.6vh, .7rem);
+    font-size:clamp(.84rem, 1.7vh, .92rem);
   }
-  .social-links{ display:flex; flex-direction:column; gap:.4rem; }
+  .social-links{ display:flex; flex-direction:column; gap:clamp(.22rem, 1vh, .4rem); }
   .social-links a{
-    font-size:.78rem;
+    font-size:clamp(.72rem, 1.4vh, .78rem);
     color:var(--ink-soft);
     transition:color .2s var(--ease);
   }
@@ -577,6 +654,9 @@ a{ color:inherit; text-decoration:none; }
   .dish-desc{ font-size:1.02rem; }
 
   .to-top{ right:2rem; bottom:2rem; }
+
+  /* Sidebar already carries a WhatsApp link — drop the floating duplicate */
+  .whatsapp-fab{ display:none; }
 }
 
 @media (min-width:1200px){
