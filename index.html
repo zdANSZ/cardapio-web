@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>D'Biagy Forneria — Cardápio</title>
+<meta name="description" content="Cardápio digital da Forneria D'Biagy. Pizzas artesanais de longa fermentação, entradas, drinks e uma carta de vinhos curada.">
+<meta name="theme-color" content="#F4EED3">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#sobre">Pular para o conteúdo</a>
+
+<header class="sidebar" id="sidebar">
+  <div class="sidebar-top">
+    <a href="#topo" class="brand" aria-label="D'Biagy Forneria — início">
+      <img src="assets/logo.png" alt="D'Biagy Forneria" width="200" height="152">
+    </a>
+  </div>
+
+  <p class="tagline">Feito à mão.<br>Servido à mesa.</p>
+
+  <nav class="menu-nav" aria-label="Categorias do cardápio">
+    <a href="#entradas" data-label="Entradas"><span>Entradas</span></a>
+    <a href="#pizzas-salgadas" data-label="Salgadas"><span>Pizzas Salgadas</span></a>
+    <a href="#pizzas-doces" data-label="Doces"><span>Pizzas Doces</span></a>
+    <a href="#bebidas" data-label="Bebidas"><span>Bebidas &amp; Drinks</span></a>
+    <a href="#vinhos" data-label="Vinhos"><span>Carta de Vinhos</span></a>
+  </nav>
+
+  <div class="sidebar-bottom">
+    <span class="social-label">Siga-nos</span>
+    <div class="social-links">
+      <a href="https://instagram.com/dbiagyforneria" target="_blank" rel="noopener">@dbiagyforneria</a>
+      <a href="https://instagram.com/dbiagyraizes" target="_blank" rel="noopener">@dbiagyraízes</a>
+      <a href="https://instagram.com/dbiagypremium" target="_blank" rel="noopener">@dbiagypremium</a>
+    </div>
+  </div>
+</header>
+
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+<main class="content" id="topo">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-photo">
+      <div class="hero-photo-scrim"></div>
+    </div>
+    <div class="hero-panel">
+      <img class="hero-logo" src="assets/logo.png" alt="D'Biagy Forneria" width="180" height="137">
+      <div class="hero-menu-word" aria-hidden="true">MENU</div>
+      <a href="#sobre" class="scroll-cue" aria-label="Rolar para ver o cardápio">
+        <span class="chevron"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="intro reveal" id="sobre">
+    <p class="eyebrow">Feito à mão. Servido à mesa.</p>
+    <div class="intro-lines">
+      <p class="reveal-child">Nossa paixão pela hospitalidade nos conduziu, naturalmente, até a mesa.</p>
+      <hr class="thin">
+      <p class="reveal-child">A Forneria D'Biagy nasce da nossa descendência italiana, do amor ao fogo, à farinha e ao tempo.</p>
+      <hr class="thin">
+      <p class="reveal-child">Aqui, cada pizza é feita à mão, com massa de longa fermentação e ingredientes criteriosamente selecionados.</p>
+      <hr class="thin">
+    </div>
+    <p class="welcome reveal-child">Bem-vindo à nossa tavola.</p>
+  </section>
+
+  <!-- ENTRADAS -->
+  <section class="menu-section" id="entradas">
+    <div class="section-head reveal">
+      <span class="section-label">Entradas</span>
+    </div>
+
+    <ul class="dish-list">
+      <li class="dish reveal">
+        <div class="dish-row">
+          <h3>Crostini</h3>
+          <span class="price">R$ 49</span>
+        </div>
+        <p class="dish-desc">Massa crocante com parmesão, azeite e orégano. Acompanha molho da casa e caponata de pinhão.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row">
+          <h3>Rotolino de Quatro Queijos</h3>
+          <span class="price">R$ 49</span>
+        </div>
+        <p class="dish-desc">Massa enrolada com molho, parmesão, provolone, gorgonzola e catupiry. Finalizada com parmesão e mel.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PIZZAS SALGADAS -->
+  <section class="menu-section" id="pizzas-salgadas">
+    <div class="section-head reveal">
+      <span class="section-label">Pizzas Salgadas</span>
+    </div>
+
+    <ul class="dish-list">
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Mussarela</h3><span class="price">R$ 79</span></div>
+        <p class="dish-desc">Massa, molho de tomate, azeitona preta, orégano e mussarela.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Calabresa Artesanal</h3><span class="price">R$ 89</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, calabresa artesanal e cebola roxa marinada em azeite com ervas finas.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Frango &amp; Catupiry</h3><span class="price">R$ 95</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, frango desfiado, catupiry e farofa de bacon.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Brie &amp; Geleia de Pimenta</h3><span class="price">R$ 95</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, queijo brie, geleia de pimenta e farofa de bacon.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Vila Capivari</h3><span class="price">R$ 109</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, pepperoni, stracciatella, manjericão e mel apimentado.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Parma al Limone</h3><span class="price">R$ 109</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, stracciatella, parma e raspas de limão siciliano.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>D'Biagy Premium</h3><span class="price">R$ 119</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, mortadela italiana, stracciatella, pesto de manjericão, pistache e mel da Mantiqueira.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Margherita D'Biagy</h3><span class="price">R$ 89</span></div>
+        <p class="dish-desc">Mozzarela de búfala, molho de tomate, azeitona preta, orégano, tomate confit, pesto de manjericão e parmesão.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Quatro Queijos</h3><span class="price">R$ 95</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, gorgonzola, parmesão e catupiry.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Portuguesa Speciale</h3><span class="price">R$ 95</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, presunto royal, ovo, cebola roxa marinada, pesto de azeitona e manjericão.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Vila Inglesa</h3><span class="price">R$ 99</span></div>
+        <p class="dish-desc">Scamorza defumada, molho de tomate, azeitona preta, orégano, lombo defumado, geleia de pimenta e crocante de parma.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>D'Biagy Raízes</h3><span class="price">R$ 109</span></div>
+        <p class="dish-desc">Mozzarela de búfala, molho de tomate, azeitona preta, orégano, tomate confit, parma fatiado, rúcula baby e grana padano.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>D'Mantiqueira</h3><span class="price">R$ 116</span></div>
+        <p class="dish-desc">Mussarela, molho de tomate, azeitona preta, orégano, queijo de cabra, pesto de rúcula e crispy de parma.</p>
+      </li>
+    </ul>
+
+    <p class="footnote">Massa artesanal de longa fermentação · Ingredientes selecionados</p>
+  </section>
+
+  <div class="divider" aria-hidden="true">
+    <svg viewBox="0 0 120 40" class="divider-svg"><circle cx="60" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="1"/><path d="M60 4 L60 36 M44 20 L76 20" stroke="currentColor" stroke-width="0.6"/><circle cx="52" cy="14" r="1.6" fill="currentColor"/><circle cx="68" cy="16" r="1.4" fill="currentColor"/><circle cx="58" cy="27" r="1.5" fill="currentColor"/><circle cx="70" cy="26" r="1.2" fill="currentColor"/></svg>
+  </div>
+
+  <!-- PIZZAS DOCES -->
+  <section class="menu-section" id="pizzas-doces">
+    <div class="section-head reveal">
+      <span class="section-label">Pizzas Doces</span>
+    </div>
+
+    <ul class="dish-list">
+      <li class="dish reveal">
+        <div class="dish-row"><h3>S'mores</h3><span class="price">R$ 69</span></div>
+        <p class="dish-desc">Creme de chocolate ao leite, chocolate branco, marshmallow e açúcar de confeiteiro.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Dolce D'Biagy</h3><span class="price">R$ 69</span></div>
+        <p class="dish-desc">Banana nanica, canela e creme de chocolate branco.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Nutella &amp; Pistache</h3><span class="price">R$ 76</span></div>
+        <p class="dish-desc">Creme de leite, Nutella e pistache triturado.</p>
+      </li>
+    </ul>
+
+    <p class="footnote">Massa artesanal de longa fermentação · Ingredientes selecionados</p>
+  </section>
+
+  <!-- BEBIDAS -->
+  <section class="menu-section" id="bebidas">
+    <div class="section-head reveal">
+      <span class="section-label">Bebidas &amp; Drinks</span>
+      <p class="section-sub">Uma seleção para acompanhar a sua experiência</p>
+    </div>
+
+    <ul class="dish-list">
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Cerveja</h3><span class="price">R$ 35</span></div>
+        <p class="dish-desc">Baden Baden Crystal 600ml</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Não Alcoólicos</h3><span class="price">R$ 12</span></div>
+        <p class="dish-desc">Água sem gás · Água com gás · Coca-Cola · Coca-Cola Zero · Guaraná · Guaraná Zero · Água Tônica · Água Tônica Zero</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Sucos Naturais</h3><span class="price">R$ 15</span></div>
+        <p class="dish-desc">Laranja · Limão · Morango</p>
+      </li>
+    </ul>
+
+    <h4 class="subgroup reveal">Drinks &amp; Coquetéis <span class="price">R$ 45</span></h4>
+    <ul class="dish-list">
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Aperol Spritz</h3></div>
+        <p class="dish-desc">Aperol, espumante, água com gás, laranjas fatiadas e gelo.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Negroni</h3></div>
+        <p class="dish-desc">Gin, Campari e vermute rosso.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>G&amp;T D'Biagy</h3></div>
+        <p class="dish-desc">Gin, limão siciliano e alecrim.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Espresso Martini</h3></div>
+        <p class="dish-desc">Vodka, licor de café e espresso.</p>
+      </li>
+      <li class="dish reveal">
+        <div class="dish-row"><h3>Caipirinha</h3></div>
+        <p class="dish-desc">Limão ou morango. Cachaça, vodka ou sakê.</p>
+      </li>
+    </ul>
+
+    <h4 class="subgroup reveal">Cafés &amp; Licores</h4>
+    <ul class="dish-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Espresso</h3><span class="price">R$ 10</span></div></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Amarula</h3><span class="price">R$ 20</span></div></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Licor 43</h3><span class="price">R$ 25</span></div></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Cointreau</h3><span class="price">R$ 25</span></div></li>
+    </ul>
+  </section>
+
+  <!-- VINHOS -->
+  <section class="menu-section wines" id="vinhos">
+    <div class="section-head reveal">
+      <p class="eyebrow">carta de vinhos</p>
+      <span class="section-label">Vinhos</span>
+      <p class="section-sub">Uma seleção curada para harmonizar com a nossa cozinha</p>
+    </div>
+
+    <h4 class="subgroup reveal">Espumantes &amp; Champagnes</h4>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Chandon Brut <em class="origin">Brasil</em></h3><span class="price">R$ 249</span></div></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Chandon Rosé <em class="origin">Brasil</em></h3><span class="price">R$ 249</span></div></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Mayos Brut <em class="origin">Brasil</em></h3><span class="price">R$ 129</span></div></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Moët &amp; Chandon <em class="origin">França</em></h3><span class="price">R$ 799</span></div></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Veuve Clicquot <em class="origin">França</em></h3><span class="price">R$ 899</span></div></li>
+    </ul>
+
+    <h4 class="subgroup reveal">Vinhos Brancos</h4>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Zapa Viognier</h3><span class="price">R$ 129</span></div><p class="grape">Viognier · Argentina</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Ravanal Gran Reserva</h3><span class="price">R$ 159</span></div><p class="grape">Chardonnay · Chile</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Château Subsonico</h3><span class="price">R$ 289</span></div><p class="grape">Pedro Giménez · Argentina</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Calcu Tiny Blocks</h3><span class="price">R$ 259</span></div><p class="grape">Sauvignon Blanc · Chile</p></li>
+    </ul>
+
+    <h4 class="subgroup reveal">Vinhos Rosés</h4>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Ravanal</h3><span class="price">R$ 179</span></div><p class="grape">Merlot &amp; Syrah · Argentina</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Viu Reserva</h3><span class="price">R$ 199</span></div><p class="grape">Malbec · Chile</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Les Hauts Plateux</h3><span class="price">R$ 349</span></div><p class="grape">Syrah, Grenache, Cinsault · França</p></li>
+    </ul>
+
+    <h4 class="subgroup reveal">Vinhos em Taças</h4>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Cabernet Sauvignon Mayos</h3><span class="price">R$ 40</span></div><p class="grape">Taça</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Chardonnay Mayos</h3><span class="price">R$ 40</span></div><p class="grape">Taça</p></li>
+    </ul>
+
+    <h4 class="subgroup reveal">Vinhos Tintos</h4>
+
+    <p class="country reveal">Portugal</p>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Cartuxa</h3><span class="price">R$ 499</span></div><p class="grape">Aragonez, Alicante Bouschet, Trincadeira</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Quinta dos Bons Ventos</h3><span class="price">R$ 129</span></div><p class="grape">Castelão, Camarete, Tinta Miúda, Touriga Nacional</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Papa Figos</h3><span class="price">R$ 259</span></div><p class="grape">Touriga Franca, Aragonez, Touriga Nacional, Tinta Barroca</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Alma de Lisboa</h3><span class="price">R$ 169</span></div><p class="grape">Touriga Nacional</p></li>
+    </ul>
+
+    <p class="country reveal">França</p>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Côtes du Rhône Tradition</h3><span class="price">R$ 249</span></div><p class="grape">Grenache, Syrah, Mourvédre</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Métairie des Pins de Verdieu</h3><span class="price">R$ 129</span></div><p class="grape">Cabernet Sauvignon, Merlot</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Philippe Lechaitel Bourgogne</h3><span class="price">R$ 549</span></div><p class="grape">Pinot Noir</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Vignobles Vellas Cuvée Prestige</h3><span class="price">R$ 209</span></div><p class="grape">Cabernet Sauvignon</p></li>
+    </ul>
+
+    <p class="country reveal">Itália</p>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Crear di Vero Appassimento</h3><span class="price">R$ 169</span></div><p class="grape">Primitivo</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Crear di Vero Chianti DOCG</h3><span class="price">R$ 189</span></div><p class="grape">Sangiovese</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Crear di Vero Barolo</h3><span class="price">R$ 749</span></div><p class="grape">Nebbiolo</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Crear di Vero Delle Venezie</h3><span class="price">R$ 159</span></div><p class="grape">Pinot Grigio</p></li>
+    </ul>
+
+    <p class="country reveal">Chile</p>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>Vik A</h3><span class="price">R$ 259</span></div><p class="grape">Cabernet Sauvignon</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Milla Calla</h3><span class="price">R$ 499</span></div><p class="grape">Blend</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>La Piu Belle</h3><span class="price">R$ 799</span></div><p class="grape">Blend</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Vik</h3><span class="price">R$ 1.599</span></div><p class="grape">Blend</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Viu Manet</h3><span class="price">R$ 169</span></div><p class="grape">Carménère</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Ravanal Gran Reserva</h3><span class="price">R$ 179</span></div><p class="grape">Carménère</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Perez Cruz Limited Edition</h3><span class="price">R$ 249</span></div><p class="grape">Cabernet Franc</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Perez Cruz Grand Reserva</h3><span class="price">R$ 169</span></div><p class="grape">Grand Reserva</p></li>
+    </ul>
+
+    <p class="country reveal">Argentina</p>
+    <ul class="dish-list wine-list">
+      <li class="dish reveal"><div class="dish-row"><h3>DV Catena</h3><span class="price">R$ 249</span></div><p class="grape">Cabernet Malbec</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Alma Negra</h3><span class="price">R$ 349</span></div><p class="grape">Blend</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Angélica Zapata</h3><span class="price">R$ 399</span></div><p class="grape">Malbec</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Rutini</h3><span class="price">R$ 299</span></div><p class="grape">Cabernet Malbec</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>El Enemigo</h3><span class="price">R$ 399</span></div><p class="grape">Malbec</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Zapa Reserva</h3><span class="price">R$ 229</span></div><p class="grape">Malbec</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Alamos</h3><span class="price">R$ 269</span></div><p class="grape">Malbec</p></li>
+      <li class="dish reveal"><div class="dish-row"><h3>Alamos</h3><span class="price">R$ 299</span></div><p class="grape">Blend</p></li>
+    </ul>
+
+    <p class="footnote">Serviço de rolha: R$ 60</p>
+  </section>
+
+  <footer class="site-footer reveal">
+    <img class="footer-logo" src="assets/logo.png" alt="D'Biagy Forneria" width="140" height="107">
+    <p class="footer-note">Será cobrada taxa de serviço de 10%</p>
+    <p class="footer-social-label">Siga-nos no Instagram</p>
+    <div class="footer-social">
+      <a href="https://instagram.com/dbiagyforneria" target="_blank" rel="noopener">@dbiagyforneria</a>
+      <a href="https://instagram.com/dbiagyraizes" target="_blank" rel="noopener">@dbiagyraízes</a>
+      <a href="https://instagram.com/dbiagypremium" target="_blank" rel="noopener">@dbiagypremium</a>
+    </div>
+    <p class="footer-fine">Cardápio digital · imagens meramente ilustrativas</p>
+  </footer>
+
+</main>
+
+<button id="toTop" class="to-top" aria-label="Voltar ao topo">
+  <span></span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
