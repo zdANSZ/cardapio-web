@@ -301,21 +301,88 @@ a{ color:inherit; text-decoration:none; }
 .dish-list--gallery .dish-row{ justify-content:space-between; }
 
 .dish-photo{
-  aspect-ratio:2/3;
+  position:relative;
+  aspect-ratio:4/3;
   overflow:hidden;
   margin-bottom:1.1rem;
   border-radius:3px;
   box-shadow:0 10px 26px rgba(23,20,15,.16);
+  background:var(--cream-deep);
 }
-.dish-photo--wide{ aspect-ratio:3/2; }
-.dish-photo img{
+
+/* Carousel track — manual only, never advances on its own */
+.dish-slides{
+  display:flex;
+  height:100%;
+  transition:transform .45s var(--ease);
+}
+.dish-slides img{
+  flex:0 0 100%;
   width:100%;
   height:100%;
   object-fit:cover;
   display:block;
-  transition:transform .7s var(--ease);
 }
-.dish--photo:hover .dish-photo img{ transform:scale(1.045); }
+
+.car-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:38px; height:38px;
+  border-radius:50%;
+  border:1px solid rgba(244,238,211,.55);
+  background:rgba(23,20,15,.45);
+  cursor:pointer;
+  z-index:2;
+  padding:0;
+  transition:opacity .3s var(--ease), background .2s var(--ease);
+}
+.car-btn::before{
+  content:'';
+  position:absolute;
+  top:50%; left:50%;
+  width:8px; height:8px;
+  border-top:1.5px solid var(--cream);
+  border-right:1.5px solid var(--cream);
+}
+.car-prev{ left:.6rem; }
+.car-next{ right:.6rem; }
+.car-prev::before{ transform:translate(-35%,-50%) rotate(-135deg); }
+.car-next::before{ transform:translate(-65%,-50%) rotate(45deg); }
+.car-btn:hover{ background:rgba(23,20,15,.7); }
+
+.car-dots{
+  position:absolute;
+  left:0; right:0; bottom:.65rem;
+  display:flex;
+  justify-content:center;
+  gap:.4rem;
+  z-index:2;
+}
+.car-dot{
+  width:7px; height:7px;
+  padding:0;
+  border-radius:50%;
+  border:1px solid rgba(244,238,211,.85);
+  background:transparent;
+  cursor:pointer;
+  transition:background .25s var(--ease), transform .25s var(--ease);
+}
+.car-dot.active{
+  background:var(--cream);
+  transform:scale(1.15);
+}
+
+/* On pointer devices the arrows stay out of the way until hover */
+@media (hover:hover){
+  .car-btn{ opacity:0; }
+  .dish-photo:hover .car-btn,
+  .car-btn:focus-visible{ opacity:1; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .dish-slides{ transition:none; }
+}
 
 .dish-row{
   display:flex;

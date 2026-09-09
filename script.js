@@ -104,4 +104,61 @@
   navLinks.forEach(link => {
     link.addEventListener('click', () => centerNavLink(link));
   });
+
+  /* ---------------------------------------------------------
+     Dish photo carousel — advances only on user action
+     (arrows, dots, swipe or arrow keys). Never on a timer.
+  --------------------------------------------------------- */
+  document.querySelectorAll('[data-carousel]').forEach(root => {
+    const track = root.querySelector('.dish-slides');
+    const slides = [...track.children];
+    if (slides.length < 2) return;
+
+    const dots = [...root.querySelectorAll('.car-dot')];
+    let index = 0;
+
+    // Slides beyond the cover carry their URL in data-src so they only
+    // download once the viewer actually reaches for them.
+    const load = (n) => {
+      const img = slides[(n + slides.length) % slides.length];
+      if (img && img.dataset.src) {
+        img.src = img.dataset.src;
+        delete img.dataset.src;
+      }
+    };
+
+    const go = (n) => {
+      index = (n + slides.length) % slides.length;
+      load(index);
+      load(index + 1);
+      track.style.transform = `translateX(${-index * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+        if (i === index) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+    };
+
+    root.querySelector('.car-prev').addEventListener('click', () => go(index - 1));
+    root.querySelector('.car-next').addEventListener('click', () => go(index + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
+
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(index - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1); }
+    });
+
+    let startX = null, deltaX = 0;
+    track.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      deltaX = 0;
+    }, { passive: true });
+    track.addEventListener('touchmove', (e) => {
+      if (startX !== null) deltaX = e.touches[0].clientX - startX;
+    }, { passive: true });
+    track.addEventListener('touchend', () => {
+      if (Math.abs(deltaX) > 40) go(deltaX < 0 ? index + 1 : index - 1);
+      startX = null;
+    }, { passive: true });
+  });
 })();
