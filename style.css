@@ -285,6 +285,37 @@ a{ color:inherit; text-decoration:none; }
 }
 .dish:last-child{ border-bottom:none; }
 
+/* ---------------------------------------------------------------
+   Photo cards (Entradas / Pizzas Salgadas / Pizzas Doces)
+--------------------------------------------------------------- */
+.dish-list--gallery{
+  display:flex;
+  flex-direction:column;
+  gap:2.6rem;
+}
+.dish-list--gallery .dish{
+  padding:0;
+  border-bottom:none;
+}
+.dish-list--gallery .dish-row::after{ display:none; }
+.dish-list--gallery .dish-row{ justify-content:space-between; }
+
+.dish-photo{
+  aspect-ratio:4/3;
+  overflow:hidden;
+  margin-bottom:1.1rem;
+  border-radius:3px;
+  box-shadow:0 10px 26px rgba(23,20,15,.16);
+}
+.dish-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .7s var(--ease);
+}
+.dish--photo:hover .dish-photo img{ transform:scale(1.045); }
+
 .dish-row{
   display:flex;
   align-items:baseline;
@@ -640,6 +671,14 @@ a{ color:inherit; text-decoration:none; }
 
   .dish-row h3{ font-size:1.42rem; }
   .dish-desc{ font-size:1.02rem; }
+
+  #entradas, #pizzas-salgadas, #pizzas-doces{ max-width:920px; }
+
+  .dish-list--gallery{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.8rem 2rem;
+  }
 
   .to-top{ right:2rem; bottom:2rem; }
 
